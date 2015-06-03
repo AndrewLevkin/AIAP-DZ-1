@@ -5,7 +5,7 @@
 using ::std::list;
 using ::std::shared_ptr;
 using ::std::string;
-//Класс сотрудников и класс структурных подразделений (отделов и др.) для отдела кадров организации.
+//ГЉГ«Г Г±Г± Г±Г®ГІГ°ГіГ¤Г­ГЁГЄГ®Гў ГЁ ГЄГ«Г Г±Г± Г±ГІГ°ГіГЄГІГіГ°Г­Г»Гµ ГЇГ®Г¤Г°Г Г§Г¤ГҐГ«ГҐГ­ГЁГ© (Г®ГІГ¤ГҐГ«Г®Гў ГЁ Г¤Г°.) Г¤Г«Гї Г®ГІГ¤ГҐГ«Г  ГЄГ Г¤Г°Г®Гў Г®Г°ГЈГ Г­ГЁГ§Г Г¶ГЁГЁ.
 class Department {
 private:
 	string Name;
@@ -39,4 +39,8 @@ public:
 	Department& operator=(const Department& Department);
 	Worker& operator[](int idx);
 	bool has(const Worker& Worker);
+<<<<<<< HEAD
 }; 
+=======
+};
+>>>>>>> origin/master

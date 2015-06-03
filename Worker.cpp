@@ -50,8 +50,13 @@ bool Worker::operator==(const Worker &input) const {
 		(input.Role == this->Role));
 }
 ostream& operator<<(ostream& os, const Worker& st) {
+<<<<<<< HEAD
 	os << "FirstName - " << st.FirstName << " SecondName - " << st.SecondName << " Pay "
 		<< st.Pay << " Role " << "type " << st.Role<<endl;
+=======
+	os << "FirstName - " << st.FirstName << "SecondName - " << st.SecondName << "Pay "
+		<< st.Pay << "Role " << "type " << st.Role;
+>>>>>>> origin/master
 	return os;
 }
 Worker& Worker::operator=(const Worker& input) {
@@ -62,4 +67,8 @@ Worker& Worker::operator=(const Worker& input) {
 		this->Role = input.Role;
 	}
 	return *this;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
