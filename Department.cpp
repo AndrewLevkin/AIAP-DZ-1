@@ -92,9 +92,9 @@ const Department& Department::operator+(const Department& input) const {
 Department& Department::operator=(const Department& input) {
 	if (this != &input) {
 		this->Name = input.Name;
-		this->AmountPpl == input.AmountPpl;
-		this->Budget == input.Budget;
-		this->Workers == input.Workers;
+		this->AmountPpl = input.AmountPpl;
+		this->Budget = input.Budget;
+		this->Workers = input.Workers;
 	}
 	return *this;
 }

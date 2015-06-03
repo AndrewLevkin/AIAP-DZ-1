@@ -1,9 +1,9 @@
 #include "Worker.h"
 Worker::Worker(const string& FirstNameC, const string& SecondNameC, int PayC, const string& RoleC) {
-	const string& FirstName = FirstNameC;
-	const string& SecondName = SecondNameC;
-	int Pay = PayC;
-	const string& Role = RoleC;
+	FirstName = FirstNameC;
+	SecondName = SecondNameC;
+	Pay = PayC;
+	Role = RoleC;
 }
 
 Worker::Worker() {
@@ -42,4 +42,24 @@ int Worker::GetPay() {
 }
 void Worker::Print() {
 	cout << Worker::FirstName << Worker::SecondName << Worker::Role << Worker::Pay << endl;
+}
+bool Worker::operator==(const Worker &input) const {
+	return ((input.FirstName == this->FirstName) &&
+		(input.SecondName == this->SecondName) &&
+		(input.Pay == this->Pay) &&
+		(input.Role == this->Role));
+}
+ostream& operator<<(ostream& os, const Worker& st) {
+	os << "FirstName - " << st.FirstName << " SecondName - " << st.SecondName << " Pay "
+		<< st.Pay << " Role " << "type " << st.Role<<endl;
+	return os;
+}
+Worker& Worker::operator=(const Worker& input) {
+	if (this != &input) {
+		this->FirstName = input.FirstName;
+		this->SecondName = input.SecondName;
+		this->Pay = input.Pay;
+		this->Role = input.Role;
+	}
+	return *this;
 }

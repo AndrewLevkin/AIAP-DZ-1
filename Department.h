@@ -1,5 +1,4 @@
 #pragma once
-#include "Worker.h"
 #include "./Exeptions.h"
 #include <list>
 #include <memory>
@@ -12,13 +11,16 @@ private:
 	string Name;
 	int AmountPpl;
 	int Budget;
-	list<Worker> Workers;
+	list<Worker> Workers; 
 public:
 	Department();
 	Department(const Department& Department);
 	Department(const string& NameC, int AmountPplC,int BudgetC);
 	Department(const string& NameC, int AmountPplC, int BudgetC, const list<Worker>& WorkerList);
+
+public:
 	~Department();
+public:
 	const string& GetName() const;
 	int GetAmountPpl() const;
 	int GetBudget()const;
@@ -37,4 +39,4 @@ public:
 	Department& operator=(const Department& Department);
 	Worker& operator[](int idx);
 	bool has(const Worker& Worker);
-};
+}; 
